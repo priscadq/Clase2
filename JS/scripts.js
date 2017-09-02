@@ -9,6 +9,8 @@
 
         do {
             var nombre=prompt("Ingresar nombre");
+            ocument.getElementById("lblNombre").innerHTML = nombre;
+
         } while (nombre == "");
         
         do {
@@ -39,9 +41,42 @@
         document.getElementById("lblEmail").innerHTML = email; 
         
         
-        }
+    }
+/*
+function getinfo() {
+        do {
+            var nombre=prompt("Ingresar nombre");
+            ocument.getElementById("lblNombre").innerHTML = nombre;
+
+        } while (nombre == "");
+        
+        do {
+            var apellido=prompt("Ingresar apellido");
+        } while (nombre == "");
+    
+        do {
+            var tpdocumento=prompt("Tipo Documento");
+        } while (nombre == "");
+    
+        do {
+        var nrdocumento=prompt("Nro Documento");
+        } while (isNaN(nrdocumento));
+        
+        do {
+        var telefono=prompt("Ingresar Telefono");
+        } while (isNaN(telefono));
+    
+        do {
+            var email=prompt("Ingresar email");
+        } while (nombre == "");
+    }
 
 
+
+
+testfunction(idDiv){
+    console.log("ID DIV:" )
+} */
 
 function showProductos(){
    // var prods = getProductosPorFila();
@@ -55,11 +90,9 @@ function showProductos(){
 
     }
 
-    document.getElementById("tblProductos").innerHTML = getProductosPorFila;
+    document.getElementById("tblProductos").innerHTML = getProductosPorFila();
 
 }
-
-
 
 function getProductosPorFila(){
     var filas = "";
@@ -68,5 +101,9 @@ function getProductosPorFila(){
     }
     return filas;
 }
+
+
+
+
 
 

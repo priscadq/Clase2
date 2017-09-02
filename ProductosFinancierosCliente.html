@@ -10,7 +10,7 @@
     <fieldset><legend>Cliente:</legend>
         <table>
             <tbody>
-                <tr>
+                <tr onclick="getinfo(this.id">
                     <td>Nombre</td>
                     <td><div id="lblNombre"></div></td>
                 </tr>
@@ -45,5 +45,39 @@
     <input type="button" value= "clickme" onclick="mostrarclienteyproductos();" />
     <input type="button" value= "Mostrar Producto" onclick="showProductos()" />
 
+
+    <script>
+        var miCarro = new carro("Ferrari", "LaFerrari", "2017", "Rojo");
+
+        function carro(marca, modelo, anio, color) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.anio = anio;
+            this.color;
+            this.detener = function () {
+                console.log("encender-Run run run....");
+            }
+            this.detener = function (encenderLueces) {
+                console.log("detener-Carro detenido");
+                if (encenderLueces == true) this.encerLucesTraceras();
+            }
+            this.encerLucesTraceras = function () {
+                console.log("encerLucesTraceras-Luces traceras encendidas");
+            }
+        var carroVolador = function (marca, modelo, anio, color, _tamanioalas) {
+            this._tamanioalas = _tamanioalas;
+            this.despegar = function () {
+                console.log("Alas extendidas");
+
+            }
+            this.miCarro=carro;
+            this.miCarro(marca,modelo,anio,color);
+
+        }
+        carroVolador.prototype.constructor = carro();
+            
+        }
+    </script>
+    <input type="button" value= "ProbarObjecto" onclick="carro()" />
 </body>
 </html>
