@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
-    <p id="demo"></p>
-    
-        <script>
+    <script>
+        var varGlobal = ""; // var global, porque no esta en ningun fucnion en particular
+
+        function jobloco() {
             do {
-                var nombre=prompt("Ingresar nombre completo");
+                var nombre=prompt("Ingresar nombre completo"); // var Local, porque esta dentro de una funcion
             } while (nombre == "");
             
 
@@ -41,17 +40,17 @@
             }
             
 
-            document.write("<br> Nombre: " + nombre);
+            document.write("Nombre: " + nombre);
             document.write("<br> Edad: " + edad);
             document.write("<br> Año de Nacimiento: " + nacimiento);
             document.write("<br> Monto de Pension: " + pension);
             
-           
+        }
 
 
 
             
-           /* var text = "";
+        /* var text = "";
             var i = 0;
 
             do {
@@ -67,14 +66,19 @@
             document.getElementById("demo").innerHTML = text; 
             
             edad = 0 + edad;
-
-            
-            */
+         */
             
         
         
         </script>
 
+
+</head>
+<body >
+    <p id="demo"></p>
+    
+
+<input type="button" value= "cliclme" onclick="jobloco();" />
 
 
 </body>
