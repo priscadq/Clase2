@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="demo1"></p>
     
+        <script>
+            var cars = ["bmw", "volvo", "saab", "ford", "fiat", "audi"];
+            var text = "";
+            var i = 0;
+
+            do {
+                text += "<br> Number is " + i;
+                i++;
+                var r = obetenerresultado();
+            }
+            while (r == false);
+
+            document.getElementById("demo").innerHTML = text;
+            
+            function obtenerresultado() {
+                return true;
+            }
+        
+        
+        </script>
+
+
+
 </body>
 </html>
