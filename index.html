@@ -10,10 +10,43 @@
     <p id="demo"></p>
     
         <script>
-            var nombre=prompt("Ingresar Nombre Completo");
-            var edad=prompt("Ingresar Edad")
-            edad = 0 + edad;
-            if(isNaN(edad)); false == numero
+            do {
+                var nombre=prompt("Ingresar nombre completo");
+            } while (nombre == "");
+            
+
+
+            do {
+            var edad=prompt("Ingresar Edad");
+            } while (isNaN(edad));
+
+            do {
+            var salario=prompt("Ingresar salario");
+            } while (isNaN(salario));
+
+            
+            var nacimiento = new Date().getFullYear() - edad;
+
+            if (nacimiento <= 1977) {
+                var pension = 70 * salario / 100;
+            }
+            if (nacimiento <= 1967) {
+                var pension = 85 * salario / 100;
+            }
+            if (nacimiento <= 1960) {
+                var pension = salario;
+            }
+            if (nacimiento > 1977) {
+                var pension = "muy joven para tener pension";
+            }
+            
+
+            document.write("<br> Nombre: " + nombre);
+            document.write("<br> Edad: " + edad);
+            document.write("<br> Año de Nacimiento: " + nacimiento);
+            document.write("<br> Monto de Pension: " + pension);
+            
+           
 
 
 
