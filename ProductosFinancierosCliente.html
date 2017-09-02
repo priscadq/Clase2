@@ -6,7 +6,7 @@
     <title></title>
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
-<body>
+<body onload="mostrar()">
     <fieldset><legend>Cliente:</legend>
         <table>
             <tbody>
@@ -47,7 +47,11 @@
 
 
     <script>
-        var miCarro = new carro("Ferrari", "LaFerrari", "2017", "Rojo");
+    
+
+
+  /*
+        var miCarroLoco = new carro("Ferrari", "LaFerrari", "2017", "Rojo");
 
         function carro(marca, modelo, anio, color) {
             this.marca = marca;
@@ -64,19 +68,22 @@
             this.encerLucesTraceras = function () {
                 console.log("encerLucesTraceras-Luces traceras encendidas");
             }
+        }
+
+
+
         var carroVolador = function (marca, modelo, anio, color, _tamanioalas) {
             this._tamanioalas = _tamanioalas;
+            this.miCarro= carro; 
+            
+            this.miCarro(marca,modelo,anio,color);
             this.despegar = function () {
                 console.log("Alas extendidas");
-
-            }
-            this.miCarro=carro;
-            this.miCarro(marca,modelo,anio,color);
-
-        }
-        carroVolador.prototype.constructor = carro();
+            }            
+            carroVolador.prototype.constructor = carro();
             
         }
+   */
     </script>
     <input type="button" value= "ProbarObjecto" onclick="carro()" />
 </body>

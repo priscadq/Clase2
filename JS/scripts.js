@@ -3,7 +3,7 @@
     var productos = ["Tj Visa", "Tj MasterCard", "Caja de Ahorro", "Caja Corriente"];
 
    
-
+/*
     function mostrarclienteyproductos() {
 
 
@@ -42,7 +42,44 @@
         
         
     }
-/*
+*/
+
+
+
+var Persona = function (_nombre, _apellido) {
+    this.Nombre = _nombre;
+    this.Apellido = _apellido;
+    
+}
+
+var Cliente = function (_nombre, _apellido, _nroDocumento, _tpDocumento, _telefono, _email) {
+    this.NroDocumento = _nroDocumento;
+    this.TpDocumento = _tpDocumento;
+    this.Telefono = _telefono;
+    this.Email = _email;
+
+    this.personab = Persona;
+    this.personab(_nombre, _apellido);
+    
+}
+
+
+function mostrar() {
+    
+     document.getElementById("lblNombre").innerHTML = c.Nombre; 
+     document.getElementById("lblApellido").innerHTML = c.Apellido; 
+     document.getElementById("lblTipDoc").innerHTML = c.TpDocumento; 
+     document.getElementById("lblNroDocumento").innerHTML = c.NroDocumento; 
+     document.getElementById("lblTelefono").innerHTML = c.Telefono; 
+     document.getElementById("lblEmail").innerHTML = c.Email; 
+ }
+
+ var c = new Cliente("Ale","Diaz","323232","dni","33333","gmail")
+
+
+//Cliente.prototype.construtor = Persona ();
+
+    /*
 function getinfo() {
         do {
             var nombre=prompt("Ingresar nombre");
