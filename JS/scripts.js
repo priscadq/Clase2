@@ -44,18 +44,29 @@
 
 
 function showProductos(){
-    var prods = getProductos();
-    document.getElementById("tblProductos").innerHTML = prods;
+   // var prods = getProductosPorFila();
+    var getProductosPorFila = function() {
+        var columnas = "";
+        for (var i = 0; i < productos.length; i++ ) {
+            columnas = columnas + "<td>" + productos[i] + "</td>";
+        }
+        filas= "<tr>" + columnas + "</tr>";
+        return filas;
 
-}
-
-function getProductos(){
-    var columnas = "";
-    for (var i = 0; i < productos.length; i++ ) {
-        columnas = columnas + "<td>" + productos[i] + "</td>";
     }
-    filas= "<tr>" + columnas + "</tr>";
-    return filas;
-  
+
+    document.getElementById("tblProductos").innerHTML = getProductosPorFila;
 
 }
+
+
+
+function getProductosPorFila(){
+    var filas = "";
+    for (var i = 0; i < productos.length; i++ ) {
+        filas = filas + "<tr><td>" + productos[i] + "</td></tr>";
+    }
+    return filas;
+}
+
+
